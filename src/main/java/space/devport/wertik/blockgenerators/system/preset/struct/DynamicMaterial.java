@@ -1,9 +1,9 @@
-package space.devport.wertik.blockgenerators.system.preset;
+package space.devport.wertik.blockgenerators.system.preset.struct;
 
 import com.google.common.base.Strings;
 import org.bukkit.Material;
 import org.jetbrains.annotations.NotNull;
-import space.devport.wertik.blockgenerators.BlockGeneratorPlugin;
+import space.devport.wertik.blockgenerators.GeneratorPlugin;
 import space.devport.wertik.blockgenerators.Utils;
 
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class DynamicMaterial {
                 Material mat = Utils.parseMaterial(material.split(":")[0]);
 
                 if (mat == null) {
-                    BlockGeneratorPlugin.getInstance().getConsoleOutput().debug("Invalid material " + material.split(":")[0] + " skipped");
+                    GeneratorPlugin.getInstance().getConsoleOutput().debug("Invalid material " + material.split(":")[0] + " skipped");
                     continue;
                 }
 
@@ -84,7 +84,7 @@ public class DynamicMaterial {
     @NotNull
     public Material get() {
         if (fixed) return defaultMaterial;
-        Material pickedMaterial = valuedMaterialsCache.get(BlockGeneratorPlugin.getInstance().getRandom().nextInt(valuedMaterialsCache.size()));
+        Material pickedMaterial = valuedMaterialsCache.get(GeneratorPlugin.getInstance().getRandom().nextInt(valuedMaterialsCache.size()));
         return pickedMaterial != null ? pickedMaterial : defaultMaterial;
     }
 }

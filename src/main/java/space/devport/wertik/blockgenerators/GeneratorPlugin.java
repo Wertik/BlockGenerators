@@ -4,13 +4,13 @@ import lombok.Getter;
 import space.devport.utils.DevportPlugin;
 import space.devport.wertik.blockgenerators.commands.BlockGeneratorCommand;
 import space.devport.wertik.blockgenerators.listeners.BlockBreakListener;
-import space.devport.wertik.blockgenerators.system.GeneratorManager;
-import space.devport.wertik.blockgenerators.system.PresetManager;
+import space.devport.wertik.blockgenerators.system.generator.GeneratorManager;
+import space.devport.wertik.blockgenerators.system.preset.PresetManager;
 
-public class BlockGeneratorPlugin extends DevportPlugin {
+public class GeneratorPlugin extends DevportPlugin {
 
     @Getter
-    private static BlockGeneratorPlugin instance;
+    private static GeneratorPlugin instance;
 
     @Getter
     private PresetManager presetManager;

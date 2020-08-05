@@ -1,8 +1,8 @@
-package space.devport.wertik.blockgenerators.system;
+package space.devport.wertik.blockgenerators.system.preset;
 
 import org.jetbrains.annotations.Nullable;
-import space.devport.wertik.blockgenerators.BlockGeneratorPlugin;
-import space.devport.wertik.blockgenerators.system.preset.GeneratorPreset;
+import space.devport.wertik.blockgenerators.GeneratorPlugin;
+import space.devport.wertik.blockgenerators.system.preset.struct.GeneratorPreset;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -10,12 +10,12 @@ import java.util.Map;
 
 public class PresetManager {
 
-    private final BlockGeneratorPlugin plugin;
+    private final GeneratorPlugin plugin;
 
     private final Map<String, GeneratorPreset> presets = new HashMap<>();
 
     public PresetManager() {
-        this.plugin = BlockGeneratorPlugin.getInstance();
+        this.plugin = GeneratorPlugin.getInstance();
     }
 
     @Nullable

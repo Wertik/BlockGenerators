@@ -1,11 +1,11 @@
-package space.devport.wertik.blockgenerators.system;
+package space.devport.wertik.blockgenerators.system.generator.struct;
 
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
-import space.devport.wertik.blockgenerators.system.preset.GeneratorPreset;
+import space.devport.wertik.blockgenerators.system.preset.struct.GeneratorPreset;
 
 import java.util.UUID;
 
@@ -45,6 +45,14 @@ public class Generator {
 
     public Generator(Location location) {
         this(location.getBlock());
+    }
+
+    public void convertLocation() {
+
+    }
+
+    public void convertPreset() {
+
     }
 
     public void destroy() {

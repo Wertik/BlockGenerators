@@ -1,4 +1,4 @@
-package space.devport.wertik.blockgenerators.system;
+package space.devport.wertik.blockgenerators.system.generator.struct;
 
 import lombok.Data;
 import org.bukkit.Bukkit;

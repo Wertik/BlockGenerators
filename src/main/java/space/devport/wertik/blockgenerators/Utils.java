@@ -15,7 +15,7 @@ public class Utils {
         try {
             return Material.valueOf(input.trim().toUpperCase());
         } catch (IllegalArgumentException e) {
-            BlockGeneratorPlugin.getInstance().getConsoleOutput().debug("Could not parse material " + input);
+            GeneratorPlugin.getInstance().getConsoleOutput().debug("Could not parse material " + input);
             return null;
         }
     }
