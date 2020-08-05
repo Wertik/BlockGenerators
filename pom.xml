@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>space.devport.blockgenerators</groupId>
+    <groupId>space.devport.wertik.blockgenerators</groupId>
     <artifactId>BlockGenerators</artifactId>
     <version>1.0.0</version>
 
@@ -60,7 +60,7 @@
         </repository>
         <repository>
             <id>devportutils</id>
-            <url>http://play.pvpcraft.cz:8081/repository/devportutils/</url>
+            <url>http://play.pvpcraft.cz:8081/repository/devport/</url>
         </repository>
     </repositories>
 
@@ -68,7 +68,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

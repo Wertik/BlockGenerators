@@ -3,7 +3,10 @@ package space.devport.wertik.blockgenerators.system.generator;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.bukkit.Location;
+import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Nullable;
+import space.devport.utils.item.ItemBuilder;
+import space.devport.utils.text.Placeholders;
 import space.devport.wertik.blockgenerators.GeneratorPlugin;
 import space.devport.wertik.blockgenerators.system.generator.struct.Generator;
 import space.devport.wertik.blockgenerators.system.preset.struct.GeneratorPreset;
@@ -47,7 +50,9 @@ public class GeneratorManager {
      * Create a generator at location.
      */
     public Generator createGenerator(Location location, GeneratorPreset preset) {
-        return null;
+        Generator generator = new Generator(location);
+        cache.add(generator);
+        return generator;
     }
 
     public void removeGenerator(UUID uuid) {
@@ -64,6 +69,14 @@ public class GeneratorManager {
 
     public void afterLoad() {
 
+    }
+
+    public ItemStack createItem(Generator generator) {
+        ItemBuilder itemBuilder = new ItemBuilder(generator.getPreset().getItem());
+        Placeholders placeholders = new Placeholders()
+                .add("%regenDelay%", generator.getPreset().getRegenDelay());
+        itemBuilder.parseWith(placeholders);
+        return itemBuilder.build();
     }
 
     public Set<Generator> getCache() {

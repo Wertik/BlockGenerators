@@ -7,6 +7,7 @@ import space.devport.wertik.blockgenerators.system.preset.struct.GeneratorPreset
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class PresetManager {
 
@@ -18,9 +19,8 @@ public class PresetManager {
         this.plugin = GeneratorPlugin.getInstance();
     }
 
-    @Nullable
-    public GeneratorPreset getPreset(String name) {
-        return presets.getOrDefault(name, null);
+    public Optional<GeneratorPreset> getPreset(String name) {
+        return Optional.ofNullable(presets.get(name));
     }
 
     public void load() {
