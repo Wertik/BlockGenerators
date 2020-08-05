@@ -1,0 +1,19 @@
+# Customisation file for ${project.name}
+#
+# Version: ${project.version}
+
+generator-gui:
+  title: '&7Generator Control'
+  items:
+    destroy:
+      type: BARRIER
+      name: '&cDestroy the generator'
+      lore:
+        - "&7It's item will drop, dw! ;)"
+    # Appears only when there's an upgrade option.
+    upgrade:
+      type: EXP_BOTTLE
+      name: '&6Upgrade the generator'
+      glow: true
+      lore:
+        - '&7Click me to upgrade.'

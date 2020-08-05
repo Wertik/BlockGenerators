@@ -1,0 +1,7 @@
+name: BlockGenerators
+main: space.devport.wertik.blockgenerators
+authors: [Wertik1206]
+version: ${project.version}
+commands:
+  blockgenerators:
+    aliases: [bg, blockg, blockgenerator]

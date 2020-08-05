@@ -1,0 +1,43 @@
+# Preset configuration for ${project.name}
+#
+# Version: ${project.version}
+
+# The name of the preset.
+a-cool-gen:
+
+  # Pick materials based on chances.
+  regenerate-into: COAL_ORE:70;IRON_ORE:20;DIAMOND_ORE:10
+  replace-block: GRAY_CONCRETE,WHITE_CONCRETE
+
+  # In seconds, can be random between a high/low
+  regen-delay: 10-15
+
+  # Upgrade settings
+  upgrade:
+    # Into what preset to upgrade
+    into: a-cooler-gen
+    # Some costs.
+    exp-cost: 100
+    # Vault
+    money-cost: 1000
+    # TokenManager
+    tokens-cost: 10
+
+  # Item when dropped
+  generator-item:
+    type: SPAWNER
+    name: '&3A cool generator'
+    lore:
+      - '&7Place down and mine yourself to death.'
+
+# Has a better chance for diamonds and iron.
+# Also regenerates faster.
+a-cooler-gen:
+  regenerate-into: COAL_ORE:10;IRON_ORE:60;DIAMOND_ORE:30
+  replace-block: GRAY_CONCRETE,WHITE_CONCRETE
+  regen-delay: 5-7
+  generator-item:
+    type: SPAWNER
+    name: '&3An even cooler generator'
+    lore:
+      - '&7Place down and mine yourself to death.'

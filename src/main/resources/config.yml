@@ -1,0 +1,6 @@
+# Configuration for ${project.name}
+#
+# Version: ${project.version}
+
+debug-enabled: true
+plugin-prefix: '&bBlock Generators &8>> '
